@@ -1,0 +1,95 @@
+.prodCats {
+  padding: 54px 0 80px;
+  background: #fff;
+}
+
+.prodCats__head {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto 26px;
+  text-align: center;
+}
+
+.prodCats__head h1 {
+  margin: 0;
+  font-size: 44px;
+  letter-spacing: -0.03em;
+  font-weight: 950;
+  color: #0f172a;
+}
+
+.prodCats__head p {
+  margin: 10px auto 0;
+  max-width: 70ch;
+  color: rgba(15, 23, 42, 0.65);
+  line-height: 1.7;
+}
+
+.prodCats__grid {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 22px;
+}
+
+.catIconCard {
+  background: white;
+  border: 1px solid #f3d5e5;
+  border-radius: 24px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.catIconCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(236, 79, 151, 0.18);
+}
+
+.catIconCard__icon {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #ffe7f2, #ffffff);
+  border: 1px solid #f3d5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s ease;
+}
+
+.catIconCard__icon img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  transition: all 0.35s ease;
+}
+
+.catIconCard:hover .catIconCard__icon {
+  transform: scale(1.08);
+  box-shadow: 0 10px 30px rgba(236, 79, 151, 0.25);
+}
+
+.catIconCard:hover .catIconCard__icon img {
+  transform: scale(1.12);
+}
+
+.catIconCard__name {
+  margin-top: 14px;
+  font-weight: 800;
+  font-size: 15px;
+  color: #6b2b6f;
+}
+
+@media (max-width: 1100px) {
+  .prodCats__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 620px) {
+  .prodCats__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
