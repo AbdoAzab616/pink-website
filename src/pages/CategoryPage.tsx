@@ -14,7 +14,7 @@ function ProductModal({
 }) {
   if (!open || !product) return null;
 
-  const wa = `https://wa.me/201142787920?text=${encodeURIComponent(
+  const wa = `https://wa.me/201114768013?text=${encodeURIComponent(
     `Hello Pink, I want to ask about: ${product.name}`
   )}`;
 

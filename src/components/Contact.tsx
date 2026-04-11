@@ -33,7 +33,7 @@ export default function Contact() {
         <div className="contact-action">
           <a
             className="btn btn-white"
-            href="https://wa.me/201142787920"
+            href="https://wa.me/201114768013"
             target="_blank"
             rel="noreferrer"
           >

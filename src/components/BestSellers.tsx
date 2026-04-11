@@ -14,25 +14,21 @@ const bestSellers: BestSeller[] = [
     name: "Facial Tissue 550 Sheets",
     subtitle: "Ultra soft • 3 ply",
     img: "/products/pink-facial-classic-tissue-550t.png",
-    tag: "Top pick",
   },
   {
     name: "Kitchen Roll XXL",
     subtitle: "Strong absorption",
-    img: "/products/pink-kitchen-jumpo-roll-xxl.png",
-    tag: "Kitchen",
+    img: "/products/pink-kitchen-jumpo-roll-xxl.png"
   },
   {
-    name: "Toilet Tissue 12 Rolls",
+    name: "Toilet Tissue 6 Rolls",
     subtitle: "Soft • long lasting",
-    img: "/products/pink-toilet-compressed-12r.png",
-    tag: "Value",
+    img: "/products/pink-toilet-compressed-6r.png",
   },
   {
     name: "C-Fold 200 Sheets",
     subtitle: "Offices • washrooms",
     img: "/products/pink-c-fold-200t.png",
-    tag: "Pro",
   },
   {
     name: "Facial Tissue 500 Sheets",
