@@ -83,7 +83,7 @@ export default function Navbar() {
           </div>
 
           {/* Order Now Button */}
-          <NavLink to="/where-to-buy" className="btn btn-pink">
+          <NavLink to="/products" className="btn btn-pink">
             {t("hero.button")}
           </NavLink>
 
@@ -140,7 +140,7 @@ export default function Navbar() {
           </NavLink>
 
           <NavLink
-            to="/where-to-buy"
+            to="/products"
             className="btn btn-pink nav-mobile-cta"
           >
             {t("hero.button")}
