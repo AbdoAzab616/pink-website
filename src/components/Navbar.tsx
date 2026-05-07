@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import i18n from "../i18n";
 
 export default function Navbar() {
+  const { t } = useTranslation();
 
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
@@ -10,6 +13,13 @@ export default function Navbar() {
   useEffect(() => {
     setMenuOpen(false);
   }, [location.pathname]);
+
+  const changeLanguage = (lang: "en" | "ar") => {
+    i18n.changeLanguage(lang);
+
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+  };
 
   return (
     <header className="nav">
@@ -26,44 +36,55 @@ export default function Navbar() {
             className={({ isActive }) => (isActive ? "active" : "")}
             end
           >
-            Home
+            {t("nav.home")}
           </NavLink>
 
           <NavLink
             to="/products"
             className={({ isActive }) => (isActive ? "active" : "")}
           >
-            Products
+            {t("nav.products")}
           </NavLink>
 
           <NavLink
             to="/where-to-buy"
             className={({ isActive }) => (isActive ? "active" : "")}
           >
-            Where to Buy
+            {t("nav.whereToBuy")}
           </NavLink>
 
           <NavLink
             to="/about"
             className={({ isActive }) => (isActive ? "active" : "")}
           >
-            About
+            {t("nav.about")}
           </NavLink>
 
           <NavLink
             to="/contact"
             className={({ isActive }) => (isActive ? "active" : "")}
           >
-            Contact
+            {t("nav.contact")}
           </NavLink>
 
         </nav>
 
         <div className="nav-cta">
 
+          {/* Language Switch */}
+          <div className="lang-switch">
+            <button onClick={() => changeLanguage("en")}>
+              EN
+            </button>
+
+            <button onClick={() => changeLanguage("ar")}>
+              AR
+            </button>
+          </div>
+
           {/* Order Now Button */}
           <NavLink to="/where-to-buy" className="btn btn-pink">
-            Order Now
+            {t("hero.button")}
           </NavLink>
 
           <button
@@ -87,43 +108,42 @@ export default function Navbar() {
             className={({ isActive }) => (isActive ? "active" : "")}
             end
           >
-            Home
+            {t("nav.home")}
           </NavLink>
 
           <NavLink
             to="/products"
             className={({ isActive }) => (isActive ? "active" : "")}
           >
-            Products
+            {t("nav.products")}
           </NavLink>
 
           <NavLink
             to="/where-to-buy"
             className={({ isActive }) => (isActive ? "active" : "")}
           >
-            Where to Buy
+            {t("nav.whereToBuy")}
           </NavLink>
 
           <NavLink
             to="/about"
             className={({ isActive }) => (isActive ? "active" : "")}
           >
-            About
+            {t("nav.about")}
           </NavLink>
 
           <NavLink
             to="/contact"
             className={({ isActive }) => (isActive ? "active" : "")}
           >
-            Contact
+            {t("nav.contact")}
           </NavLink>
 
-          {/* Mobile Order Button */}
           <NavLink
             to="/where-to-buy"
             className="btn btn-pink nav-mobile-cta"
           >
-            Order Now
+            {t("hero.button")}
           </NavLink>
 
         </div>

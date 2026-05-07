@@ -1,0 +1,46 @@
+{
+  "brand": {
+    "name": "Pink",
+    "tissues": "Pink Tissues",
+    "products": "Pink Products",
+    "tagline": "Stylish in look. High in quality."
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About Us",
+    "whereToBuy": "Where To Buy",
+    "contact": "Contact"
+  },
+  "hero": {
+  "pill": "Premium Tissue Brand",
+  "title": "Stylish in look,",
+  "titleHighlight": "High in quality.",
+  "subtitle": "Designed for comfort, strength, and everyday use — made to feel gentle and perform confidently.",
+  "chip1": "Soft touch",
+  "chip2": "Strong absorption",
+  "chip3": "Everyday essential",
+  "bgWord": "PINK TISSUES",
+  "button": "Explore Products"
+  },
+  "products": {
+    "facialTissues": "Facial Tissues",
+    "kitchenTowels": "Kitchen Towels",
+    "toiletTissue": "Toilet Tissue",
+    "cFold": "C-Fold Tissues",
+    "sheets": "Sheets",
+    "rolls": "Rolls",
+    "threePly": "3 Ply",
+    "twoPly": "2 Ply"
+    
+  },
+  "features": {
+    "soft": "Soft",
+    "strong": "Strong",
+    "sterilized": "Sterilized",
+    "absorbent": "High Absorbency",
+    "dailyUse": "Daily Use",
+    "familyUse": "Family Use"
+  }
+}
+

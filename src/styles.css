@@ -1028,7 +1028,7 @@ a{text-decoration:none;color:inherit}
 
 .store-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
 }
 
 .storeLogoWrap {
@@ -1038,19 +1038,47 @@ a{text-decoration:none;color:inherit}
   align-items: center;
   justify-content: center;
   border-radius: 18px;
-  background: #ffea00;
+  overflow: hidden;
 }
 
 .storeLogo {
-  max-width: 115px;
   height: auto;
   object-fit: contain;
 }
 
-.store-sub {
-  font-size: 16px;
-  color: #5f6c80;
-  font-weight: 500;
+/* Noon */
+.noonWrap {
+  background: #ffe600;
+}
+
+.noonLogo {
+  width: 135px;
+}
+
+/* GoodsMart */
+.goodsmartWrap {
+  background: #ff5722;
+}
+
+.goodsmartLogo {
+  width: 135px;
+}
+
+/* Safy */
+.safyWrap {
+  background: #fff;
+}
+
+.safyLogo {
+  width: 115px;
+}
+/* bim */
+.bimWrap {
+  background: #fff;
+}
+
+.bimLogo {
+  width: 100px;
 }
 
 
@@ -1104,7 +1132,7 @@ a{text-decoration:none;color:inherit}
     radial-gradient(500px 180px at 85% 10%, rgba(255, 170, 210, 0.12), transparent 60%),
     linear-gradient(180deg, #071225 0%, #081428 100%);
   color: #fff;
-  margin-top: 56px;
+  
 }
 
 .footer__glow {
@@ -1260,4 +1288,25 @@ a{text-decoration:none;color:inherit}
     width: 38px;
     height: 38px;
   }
+}
+
+
+
+.lang-switch {
+  display: flex;
+  gap: 8px;
+  margin-right: 16px;
+}
+
+.lang-switch button {
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  color: #111;
+  transition: 0.3s;
+}
+
+.lang-switch button:hover {
+  color: #ff2f7a;
 }

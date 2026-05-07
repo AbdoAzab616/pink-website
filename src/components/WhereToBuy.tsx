@@ -5,21 +5,42 @@ const stores = [
     name: "Noon",
     url: "https://www.noon.com/egypt-en/seller/p-467418/?offer_code=e5096e9646972cec&sku=Z244D003A8D0A187C8077Z",
     logo: "/logos/noon.png",
+    logoClass: "noonLogo",
+    wrapClass: "noonWrap",
   },
   {
     name: "GoodsMart",
-    url: "#", // مش محتاجين لينك هنا
+    url: "#",
     logo: "/logos/goodsmart.png",
+    logoClass: "goodsmartLogo",
+    wrapClass: "goodsmartWrap",
+  },
+  {
+    name: "الشركة الوطنية للمشروعات الانتاجية (صافي)",
+    logo: "/logos/Safy.png",
+    logoClass: "safyLogo",
+    wrapClass: "safyWrap",
+  },
+    {
+    name: "Amazon",
+    url: "https://www.amazon.eg/s?k=pink+tissues&crid=1KYISDGJBM1SF&sprefix=pink+tissues%2Caps%2C231&ref=nb_sb_noss_1",
+    logo: "/logos/amazon.png",
+    logoClass: "amazonLogo",
+    wrapClass: "amazonWrap",
+  },
+    {
+    name: "BIM Stores",
+    logo: "/logos/bim.png",
+    logoClass: "bimLogo",
+    wrapClass: "bimWrap",
   },
 ];
 
 export default function WhereToBuy() {
-
-  const openGoodsmart = (e: React.MouseEvent) => {
+  const openGoodsmart = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
 
     const ua = navigator.userAgent;
-
     const isAndroid = /android/i.test(ua);
     const isIOS = /iPhone|iPad|iPod/i.test(ua);
 
@@ -34,16 +55,14 @@ export default function WhereToBuy() {
         "_blank"
       );
     } else {
-      window.open(
-        "https://goodsmartegypt.com/download",
-        "_blank"
-      );
+      window.open("https://goodsmartegypt.com/download", "_blank");
     }
   };
 
   return (
     <div className="container section">
       <h2 className="section-title">Where to Buy</h2>
+
       <p className="section-sub">
         You can find Pink on trusted platforms. More stores will be added soon.
       </p>
@@ -58,17 +77,11 @@ export default function WhereToBuy() {
             rel="noreferrer"
             onClick={s.name === "GoodsMart" ? openGoodsmart : undefined}
           >
-            <div
-              className={`storeLogoWrap ${
-                s.name === "GoodsMart" ? "goodsmart" : ""
-              }`}
-            >
+            <div className={`storeLogoWrap ${s.wrapClass}`}>
               <img
                 src={s.logo}
                 alt={s.name}
-                className={`storeLogo ${
-                  s.name === "GoodsMart" ? "white" : ""
-                }`}
+                className={`storeLogo ${s.logoClass}`}
               />
             </div>
 

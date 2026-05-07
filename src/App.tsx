@@ -1,5 +1,7 @@
+import ScrollToTop from "./components/ScrollToTop";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Splash from "./components/Splash";
@@ -15,15 +17,20 @@ export default function App() {
   const location = useLocation();
   const [showSplash, setShowSplash] = useState(true);
 
-  // يظهر أول مرة + عند كل تغيير route
   useEffect(() => {
     setShowSplash(true);
-    const t = window.setTimeout(() => setShowSplash(false), 650); // مدة السبلاتش
+
+    const t = window.setTimeout(() => {
+      setShowSplash(false);
+    }, 650);
+
     return () => window.clearTimeout(t);
   }, [location.pathname]);
 
   return (
     <div>
+      <ScrollToTop />
+
       <Splash show={showSplash} />
 
       <Navbar />

@@ -1,0 +1,43 @@
+{
+  "brand": {
+    "name": "Pink",
+    "tissues": "مناديل Pink",
+    "products": "منتجات Pink",
+    "tagline": "شيك في شكلها، عالية في جودتها"
+  },
+  "nav": {
+    "home": "الرئيسية",
+    "products": "المنتجات",
+    "about": "من نحن",
+    "whereToBuy": "أماكن الشراء",
+    "contact": "تواصل معنا"
+  },
+  "hero": {
+  "pill": "براند مناديل بجودة عالية",
+  "title": "شيك في شكلها،",
+  "titleHighlight": "عالية في جودتها.",
+  "subtitle": "مناديل Pink مصممة للراحة والقوة والاستخدام اليومي — ناعمة على البشرة وتؤدي بثقة في كل مرة.",
+  "chip1": "ملمس ناعم",
+  "chip2": "امتصاص قوي",
+  "chip3": "أساسية كل يوم",
+  "bgWord": "مناديل PINK"
+  },
+  "products": {
+    "facialTissues": "مناديل وجه",
+    "kitchenTowels": "مناديل مطبخ",
+    "toiletTissue": "مناديل تواليت",
+    "cFold": "مناديل C-Fold",
+    "sheets": "منديل",
+    "rolls": "رول",
+    "threePly": "3 طبقات",
+    "twoPly": "طبقتين"
+  },
+  "features": {
+    "soft": "ناعمة",
+    "strong": "قوية",
+    "sterilized": "معقمة",
+    "absorbent": "عالية الامتصاص",
+    "dailyUse": "للاستخدام اليومي",
+    "familyUse": "للاستخدام العائلي"
+  }
+}
