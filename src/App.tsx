@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import ScrollToTop from "./components/ScrollToTop";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -51,6 +52,8 @@ export default function App() {
       </main>
 
       <Footer />
+
+      <Analytics />
     </div>
   );
 }
