@@ -1,23 +1,50 @@
+import { useTranslation } from "react-i18next";
+
 export default function Contact() {
+  const { t } = useTranslation();
+
   return (
     <div className="contact-wrap">
       <div className="container contact">
-        <h2 className="contact-title">Get in Touch</h2>
-        <p className="contact-sub">Have questions? We'd love to hear from you</p>
+        <h2 className="contact-title">
+          {t("contactPage.title")}
+        </h2>
+
+        <p className="contact-sub">
+          {t("contactPage.subtitle")}
+        </p>
 
         <div className="contact-cards">
+          {/* Phone */}
           <a href="tel:+0233873100" className="contact-card">
             <div className="contact-icon">📞</div>
-            <div className="contact-label">Phone</div>
-            <div className="contact-value">+202 33 873 100</div>
+
+            <div className="contact-label">
+              {t("contactPage.phone")}
+            </div>
+
+            <div className="contact-value">
+              +202 33 873 100
+            </div>
           </a>
 
-          <a href="mailto:info@newonepink.com" className="contact-card">
+          {/* Email */}
+          <a
+            href="mailto:info@newonepink.com"
+            className="contact-card"
+          >
             <div className="contact-icon">✉️</div>
-            <div className="contact-label">Email</div>
-            <div className="contact-value">info@newonepink.com</div>
+
+            <div className="contact-label">
+              {t("contactPage.email")}
+            </div>
+
+            <div className="contact-value">
+              info@newonepink.com
+            </div>
           </a>
 
+          {/* Location */}
           <a
             href="https://maps.app.goo.gl/WcjGsr6E9U1ad8qV8"
             target="_blank"
@@ -25,8 +52,14 @@ export default function Contact() {
             className="contact-card"
           >
             <div className="contact-icon">📍</div>
-            <div className="contact-label">Location</div>
-            <div className="contact-value">Head Office – Egypt</div>
+
+            <div className="contact-label">
+              {t("contactPage.location")}
+            </div>
+
+            <div className="contact-value">
+              {t("contactPage.locationValue")}
+            </div>
           </a>
         </div>
 
@@ -37,10 +70,12 @@ export default function Contact() {
             target="_blank"
             rel="noreferrer"
           >
-            Contact Us
+            {t("contactPage.button")}
           </a>
 
-          <div className="contact-note">لطلبات الجملة و التوزيع تواصل واتساب</div>
+          <div className="contact-note">
+            {t("contactPage.whatsapp")}
+          </div>
         </div>
       </div>
     </div>

@@ -11,7 +11,9 @@ export type CatalogProduct = {
 export type CatalogCategory = {
   id: string;
   title: string;
+  titleAr: string;
   description: string;
+  descriptionAr: string;
   icon: string;
   products: CatalogProduct[];
 };
@@ -20,7 +22,9 @@ export const CATALOG: CatalogCategory[] = [
   {
     id: "facial",
     title: "Facial Tissues",
+    titleAr: "مناديل الوجه",
     description: "Soft facial tissues designed for everyday comfort.",
+    descriptionAr: "مناديل ناعمة مصممة للاستخدام اليومي.",
     icon: "/icons/facial.png",
     products: [
       //{
@@ -200,7 +204,9 @@ export const CATALOG: CatalogCategory[] = [
   {
     id: "kitchen",
     title: "Kitchen Towels",
+    titleAr: "مناديل المطبخ",
     description: "Kitchen towels for cleaning and spills.",
+    descriptionAr: "مناديل مطبخ للتنظيف والامتصاص.",
     icon: "/icons/Kitchen Towels.png",
     products: [
       //{
@@ -263,7 +269,9 @@ export const CATALOG: CatalogCategory[] = [
   {
     id: "multipurpose",
     title: "Multipurpose",
+    titleAr: "متعددة الاستخدام",
     description: "Dispenser & multipurpose tissue formats.",
+    descriptionAr: "مناديل متعددة الاستخدام وللدسبنسر.",
     icon: "/icons/Multipurpose.png",
     products: [
       {
@@ -317,7 +325,9 @@ export const CATALOG: CatalogCategory[] = [
   {
     id: "toilet",
     title: "Toilet Tissue",
+    titleAr: "مناديل التواليت",
     description: "Toilet rolls with reliable softness and strength.",
+    descriptionAr: "رولات تواليت ناعمة وقوية للاستخدام اليومي.",
     icon: "/icons/Toilet Tissue.png",
     products: [
       {

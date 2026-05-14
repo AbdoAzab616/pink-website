@@ -1,0 +1,150 @@
+{
+  "brand": {
+    "name": "Pink",
+    "tissues": "Pink Tissues",
+    "products": "Pink Products",
+    "tagline": "Stylish in look. High in quality."
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About Us",
+    "whereToBuy": "Where To Buy",
+    "contact": "Contact"
+  },
+  "hero": {
+  "pill": "Premium Tissue Brand",
+  "title": "Stylish in look,",
+  "titleHighlight": "High in quality.",
+  "subtitle": "Designed for comfort, strength, and everyday use — made to feel gentle and perform confidently.",
+  "chip1": "Soft touch",
+  "chip2": "Strong absorption",
+  "chip3": "Everyday essential",
+  "bgWord": "PINK TISSUES",
+  "button": "Explore Products"
+  },
+  "products": {
+    "facialTissues": "Facial Tissues",
+    "kitchenTowels": "Kitchen Towels",
+    "toiletTissue": "Toilet Tissue",
+    "cFold": "C-Fold Tissues",
+    "sheets": "Sheets",
+    "rolls": "Rolls",
+    "threePly": "3 Ply",
+    "twoPly": "2 Ply"
+    
+  },
+  "features": {
+    "soft": "Soft",
+    "strong": "Strong",
+    "sterilized": "Sterilized",
+    "absorbent": "High Absorbency",
+    "dailyUse": "Daily Use",
+    "familyUse": "Family Use"
+  },
+  "productsPage": {
+  "title": "Our Products",
+  "subtitle": "Browse Pink categories. Choose a collection to view all items."
+},
+"collections": {
+  "title": "Our Products",
+  "subtitle": "Browse Pink collections by category. Tap any item to view details."
+},
+"footer": {
+  "company": "Company",
+  "aboutUs": "About Us",
+  "ourValues": "Our Values",
+  "whyPink": "Why Pink",
+  "products": "Products",
+  "facial": "Facial",
+  "kitchen": "Kitchen",
+  "toilet": "Toilet",
+  "multipurpose": "Multipurpose",
+  "support": "Support",
+  "contact": "Contact",
+  "storeLocator": "Store Locator",
+  "copyright": "© 2026 Pink Sterile Tissues. All rights reserved."
+},
+"whyChoose": {
+  "title": "Why Choose Pink?",
+  "subtitle": "Pink tissues are crafted with care, combining advanced sterile technology with the softest materials.",
+  "item1": "Medical Grade Sterility",
+  "item1Desc": "Meets the highest standards for cleanliness and safety",
+
+  "item2": "Sustainable Production",
+  "item2Desc": "Environmentally responsible manufacturing process",
+
+  "item3": "Trusted Quality",
+  "item3Desc": "Loved by families across the region",
+  "imageAlt": "Pink Sterile Tissue"
+},
+"contactPage": {
+  "title": "Get in Touch",
+  "subtitle": "Have questions? We'd love to hear from you",
+
+  "location": "Location",
+  "locationValue": "Head Office – Egypt",
+
+  "email": "Email",
+  "phone": "Phone",
+
+  "button": "Contact Us",
+
+  "whatsapp": "For wholesale orders and distribution contact us on WhatsApp"
+},
+"whereToBuyPage": {
+  "title": "Where to Buy",
+  "subtitle": "You can find Pink on trusted platforms. More stores will be added soon.",
+
+  "stores": {
+    "noon": "Available on Noon",
+    "goodsmart": "Available on GoodsMart",
+    "safy": "Available at the National Company for Productive Projects (SAFY)",
+    "amazon": "Available on Amazon",
+    "bim": "Available at BIM Stores"
+  },
+
+  "cta": "Want Pink in your store?",
+  "ctaLink": "Contact us on WhatsApp"
+},
+"bestsellers": {
+  "title": "Bestsellers",
+  "subtitle": "The most loved PINK products — selected for quality and everyday use.",
+  "controls": "Bestsellers controls",
+  "scrollLeft": "Scroll left",
+  "scrollRight": "Scroll right",
+  "viewAll": "View all products",
+  "whereToBuy": "Where to buy",
+  "products": {
+    "facial550": {
+      "name": "Facial Tissue 550 Sheets",
+      "subtitle": "Ultra soft • 3 ply"
+    },
+    "kitchenXXL": {
+      "name": "Kitchen Roll XXL",
+      "subtitle": "Strong absorption"
+    },
+    "toilet6": {
+      "name": "Toilet Tissue 6 Rolls",
+      "subtitle": "Soft • long lasting"
+    },
+    "cFold200": {
+      "name": "C-Fold 200 Sheets",
+      "subtitle": "Offices • washrooms"
+    },
+    "facial500": {
+      "name": "Facial Tissue 500 Sheets",
+      "subtitle": "Daily comfort"
+    }
+  }
+},
+"categoryPage": {
+  "allCategories": "← All Categories",
+  "notFound": "Category not found",
+  "backToProducts": "Back to Products",
+  "viewDetails": "View details",
+  "askWhatsapp": "Ask on WhatsApp",
+  "close": "Close"
+}
+}
+

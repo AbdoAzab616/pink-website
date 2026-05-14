@@ -1,7 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const stores = [
   {
+    id: "noon",
     name: "Noon",
     url: "https://www.noon.com/egypt-en/seller/p-467418/?offer_code=e5096e9646972cec&sku=Z244D003A8D0A187C8077Z",
     logo: "/logos/noon.png",
@@ -9,6 +11,7 @@ const stores = [
     wrapClass: "noonWrap",
   },
   {
+    id: "goodsmart",
     name: "GoodsMart",
     url: "#",
     logo: "/logos/goodsmart.png",
@@ -16,20 +19,25 @@ const stores = [
     wrapClass: "goodsmartWrap",
   },
   {
-    name: "الشركة الوطنية للمشروعات الانتاجية (صافي)",
+    id: "safy",
+    name: "Safy",
+    
     logo: "/logos/Safy.png",
     logoClass: "safyLogo",
     wrapClass: "safyWrap",
   },
-    {
+  {
+    id: "amazon",
     name: "Amazon",
     url: "https://www.amazon.eg/s?k=pink+tissues&crid=1KYISDGJBM1SF&sprefix=pink+tissues%2Caps%2C231&ref=nb_sb_noss_1",
     logo: "/logos/amazon.png",
     logoClass: "amazonLogo",
     wrapClass: "amazonWrap",
   },
-    {
+  {
+    id: "bim",
     name: "BIM Stores",
+    
     logo: "/logos/bim.png",
     logoClass: "bimLogo",
     wrapClass: "bimWrap",
@@ -37,6 +45,8 @@ const stores = [
 ];
 
 export default function WhereToBuy() {
+  const { t } = useTranslation();
+
   const openGoodsmart = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
 
@@ -61,22 +71,30 @@ export default function WhereToBuy() {
 
   return (
     <div className="container section">
-      <h2 className="section-title">Where to Buy</h2>
+      <h2 className="section-title">
+        {t("whereToBuyPage.title")}
+      </h2>
 
       <p className="section-sub">
-        You can find Pink on trusted platforms. More stores will be added soon.
+        {t("whereToBuyPage.subtitle")}
       </p>
 
       <div className="stores-grid">
         {stores.map((s) => (
           <a
-            key={s.name}
-            className="store-card"
-            href={s.url}
-            target="_blank"
-            rel="noreferrer"
-            onClick={s.name === "GoodsMart" ? openGoodsmart : undefined}
-          >
+  key={s.id}
+  className="store-card"
+  href={s.url}
+  target="_blank"
+  rel="noreferrer"
+  onClick={
+    s.id === "goodsmart"
+      ? openGoodsmart
+      : !s.url || s.url === "#"
+      ? (e) => e.preventDefault()
+      : undefined
+  }
+>
             <div className={`storeLogoWrap ${s.wrapClass}`}>
               <img
                 src={s.logo}
@@ -85,19 +103,21 @@ export default function WhereToBuy() {
               />
             </div>
 
-            <div className="store-sub">Available on {s.name}</div>
+            <div className="store-sub">
+              {t(`whereToBuyPage.stores.${s.id}`)}
+            </div>
           </a>
         ))}
       </div>
 
       <div className="stores-note">
-        Want Pink in your store?{" "}
+        {t("whereToBuyPage.cta")}{" "}
         <a
           href="https://wa.me/201114768013"
           target="_blank"
           rel="noreferrer"
         >
-          Contact us on WhatsApp
+          {t("whereToBuyPage.ctaLink")}
         </a>
       </div>
     </div>

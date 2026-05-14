@@ -16,9 +16,7 @@ export default function Navbar() {
 
   const changeLanguage = (lang: "en" | "ar") => {
     i18n.changeLanguage(lang);
-
-    document.documentElement.lang = lang;
-    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    localStorage.setItem("lang", lang);
   };
 
   return (

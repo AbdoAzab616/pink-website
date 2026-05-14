@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Analytics } from "@vercel/analytics/react";
 import ScrollToTop from "./components/ScrollToTop";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
@@ -16,7 +17,13 @@ import ContactPage from "./pages/ContactPage";
 
 export default function App() {
   const location = useLocation();
+  const { i18n } = useTranslation();
   const [showSplash, setShowSplash] = useState(true);
+  
+  useEffect(() => {
+  document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
+  document.documentElement.lang = i18n.language;
+}, [i18n.language]);
 
   useEffect(() => {
     setShowSplash(true);

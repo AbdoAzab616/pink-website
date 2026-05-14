@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useMemo, useState, useEffect } from "react";
 import { CATALOG } from "../data/catalog";
 import type { CatalogProduct } from "../data/catalog";
@@ -88,6 +89,7 @@ function Modal({
 export default function Collections() {
   const [active, setActive] = useState(CATALOG[0]?.id ?? "facial");
   const [selected, setSelected] = useState<CatalogProduct | null>(null);
+  const { t } = useTranslation();
 
   const category = useMemo(() => {
     return CATALOG.find((c) => c.id === active) ?? CATALOG[0];
@@ -98,9 +100,9 @@ export default function Collections() {
   return (
     <div className="collections-wrap">
       <div className="container section">
-        <h2 className="section-title">Our Products</h2>
+        <h2 className="section-title">{t("collections.title")}</h2>
         <p className="section-sub">
-          Browse Pink collections by category. Tap any item to view details.
+          {t("collections.subtitle")}
         </p>
 
         <div className="tabs">

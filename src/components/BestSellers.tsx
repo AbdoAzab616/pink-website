@@ -1,48 +1,45 @@
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "./BestSellers.css";
 
 type BestSeller = {
-  name: string;
-  subtitle: string;
+  id: string;
   img: string;
   tag?: string;
 };
 
 const bestSellers: BestSeller[] = [
   {
-    name: "Facial Tissue 550 Sheets",
-    subtitle: "Ultra soft • 3 ply",
+    id: "facial550",
     img: "/products/pink-facial-classic-tissue-550t.png",
   },
   {
-    name: "Kitchen Roll XXL",
-    subtitle: "Strong absorption",
-    img: "/products/pink-kitchen-jumpo-roll-xxl.png"
+    id: "kitchenXXL",
+    img: "/products/pink-kitchen-jumpo-roll-xxl.png",
   },
   {
-    name: "Toilet Tissue 6 Rolls",
-    subtitle: "Soft • long lasting",
+    id: "toilet6",
     img: "/products/pink-toilet-compressed-6r.png",
   },
   {
-    name: "C-Fold 200 Sheets",
-    subtitle: "Offices • washrooms",
+    id: "cFold200",
     img: "/products/pink-c-fold-200t.png",
   },
   {
-    name: "Facial Tissue 500 Sheets",
-    subtitle: "Daily comfort",
+    id: "facial500",
     img: "/products/pink-facial-classic-tissue-500t.png",
   },
 ];
 
 export default function BestSellers() {
+  const { t } = useTranslation();
   const trackRef = useRef<HTMLDivElement | null>(null);
 
   const scrollBy = (dir: -1 | 1) => {
     const el = trackRef.current;
     if (!el) return;
+
     const amount = Math.round(el.clientWidth * 0.85) * dir;
     el.scrollBy({ left: amount, behavior: "smooth" });
   };
@@ -52,17 +49,32 @@ export default function BestSellers() {
       <div className="bspro__container">
         <div className="bspro__head">
           <div>
-            <h2 className="bspro__title">Bestsellers</h2>
+            <h2 className="bspro__title">
+              {t("bestsellers.title")}
+            </h2>
+
             <p className="bspro__desc">
-              The most loved PINK products — selected for quality and everyday use.
+              {t("bestsellers.subtitle")}
             </p>
           </div>
 
-          <div className="bspro__controls" aria-label="Bestsellers controls">
-            <button className="bspro__btnIcon" onClick={() => scrollBy(-1)} aria-label="Scroll left">
+          <div
+            className="bspro__controls"
+            aria-label={t("bestsellers.controls")}
+          >
+            <button
+              className="bspro__btnIcon"
+              onClick={() => scrollBy(-1)}
+              aria-label={t("bestsellers.scrollLeft")}
+            >
               ‹
             </button>
-            <button className="bspro__btnIcon" onClick={() => scrollBy(1)} aria-label="Scroll right">
+
+            <button
+              className="bspro__btnIcon"
+              onClick={() => scrollBy(1)}
+              aria-label={t("bestsellers.scrollRight")}
+            >
               ›
             </button>
           </div>
@@ -70,27 +82,44 @@ export default function BestSellers() {
 
         <div ref={trackRef} className="bspro__track">
           {bestSellers.map((p) => (
-            <article key={p.name} className="bspro__card">
+            <article key={p.id} className="bspro__card">
               {p.tag && <div className="bspro__tag">{p.tag}</div>}
 
               <div className="bspro__media">
-                <img src={p.img} alt={p.name} className="bspro__img" loading="lazy" />
+                <img
+                  src={p.img}
+                  alt={t(`bestsellers.products.${p.id}.name`)}
+                  className="bspro__img"
+                  loading="lazy"
+                />
               </div>
 
               <div className="bspro__body">
-                <div className="bspro__name">{p.name}</div>
-                <div className="bspro__sub">{p.subtitle}</div>
+                <div className="bspro__name">
+                  {t(`bestsellers.products.${p.id}.name`)}
+                </div>
+
+                <div className="bspro__sub">
+                  {t(`bestsellers.products.${p.id}.subtitle`)}
+                </div>
               </div>
             </article>
           ))}
         </div>
 
         <div className="bspro__cta">
-          <Link to="/products" className="bspro__ctaBtn bspro__ctaBtn--primary">
-            View all products
+          <Link
+            to="/products"
+            className="bspro__ctaBtn bspro__ctaBtn--primary"
+          >
+            {t("bestsellers.viewAll")}
           </Link>
-          <Link to="/where-to-buy" className="bspro__ctaBtn bspro__ctaBtn--ghost">
-            Where to buy
+
+          <Link
+            to="/where-to-buy"
+            className="bspro__ctaBtn bspro__ctaBtn--ghost"
+          >
+            {t("bestsellers.whereToBuy")}
           </Link>
         </div>
       </div>

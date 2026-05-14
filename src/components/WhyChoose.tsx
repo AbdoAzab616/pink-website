@@ -1,28 +1,37 @@
+import { useTranslation } from "react-i18next";
+
 export default function WhyChoose() {
+  const { t } = useTranslation();
+
   const bullets = [
-    { title: "Medical Grade Sterility", desc: "Meets the highest standards for cleanliness and safety" },
-    { title: "Sustainable Production", desc: "Environmentally responsible manufacturing process" },
-    { title: "Trusted Quality", desc: "Loved by families across the region" },
+    {
+      title: t("whyChoose.item1"),
+      desc: t("whyChoose.item1Desc"),
+    },
+    {
+      title: t("whyChoose.item2"),
+      desc: t("whyChoose.item2Desc"),
+    },
+    {
+      title: t("whyChoose.item3"),
+      desc: t("whyChoose.item3Desc"),
+    },
   ];
 
   return (
     <div className="container section why">
-
       <div className="why-left">
         <img
           src="/images/about-product.png"
-          alt="Pink Sterile Tissue"
+          alt={t("whyChoose.imageAlt")}
           className="why-image"
         />
       </div>
 
       <div className="why-right">
-        <h2 className="why-title">Why Choose Pink ?</h2>
+        <h2 className="why-title">{t("whyChoose.title")}</h2>
 
-        <p className="why-sub">
-          Pink tissues are crafted with care, combining advanced sterile technology
-          with the softest materials. Comfort matters — every sheet is designed to be gentle.
-        </p>
+        <p className="why-sub">{t("whyChoose.subtitle")}</p>
 
         <div className="why-list">
           {bullets.map((b) => (
@@ -33,12 +42,10 @@ export default function WhyChoose() {
                 <div className="why-item-title">{b.title}</div>
                 <div className="why-item-desc">{b.desc}</div>
               </div>
-
             </div>
           ))}
         </div>
       </div>
-
     </div>
   );
 }
