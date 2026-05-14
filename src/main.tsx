@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import "./i18n";
 import React from "react";
 import ReactDOM from "react-dom/client";
@@ -9,6 +10,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
+      <SpeedInsights />
     </BrowserRouter>
   </React.StrictMode>
 );
